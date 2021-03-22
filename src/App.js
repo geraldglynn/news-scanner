@@ -17,8 +17,8 @@ function App() {
 
   return (
     <>
-    <h1>My Stories!</h1>
-    { stories?.lenght && stories.map( story => story.title) }
+    <h1>News Scanner</h1>
+    { stories?.length && stories.map( story => <>{story.title}</>) }
     </>
   )
 }

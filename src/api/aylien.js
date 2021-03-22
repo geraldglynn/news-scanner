@@ -23,8 +23,6 @@ var opts = {
 };
 
 function fetchStories(callback, res) {
-  api.listStories(opts, () => { callback } );
-  debugger
   api.listStories(opts, (error, data) => { callback(error, data, res) })
 }
 

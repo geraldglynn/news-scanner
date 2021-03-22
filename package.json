@@ -16,7 +16,13 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "server": "pm2 start src/server.js",
+
+    "server": "pm2 start src/server.js --name 'news-fetcher'",
+    "server:restart": "pm2 restart news-fetcher",
+    "server:stop": "pm2 stop news-fetcher",
+    "dev-server": "pm2 start src/server.js --name 'news-fetcher' --watch",
+    "dev-server:stop": "pm2 stop news-fetcher --watch",
+
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
